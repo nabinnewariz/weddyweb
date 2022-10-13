@@ -1,0 +1,26 @@
+.container {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #d1d1d1;
+    margin: auto;
+    padding: 30px 60px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    h1 {
+        text-align: center;
+    }
+    p {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    form { width: 100%;}
+}
+::ng-deep .input-wrapper label{
+    // width: 20%!important;
+}
+::ng-deep .container .input-wrapper .newInputClass {
+    width: 78% !important;
+}

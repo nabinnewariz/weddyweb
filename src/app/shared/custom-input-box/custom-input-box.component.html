@@ -1,0 +1,11 @@
+<div class="input-wrapper" [ngClass]="focu ? 'newWrapClass' : ''">
+    <label for={{labelInput}} [ngClass]="focu ? 'newLabelClass' : ''"> {{labelInput}}
+    </label>
+    <input type={{formType}} id={{labelInput}} [ngClass]="focu ? 'newInputClass' : ''" name={{labelInput}} value={{itemSelected}}
+        (focus)="inputFocus()" (blur)="inputBlur()" [(ngModel)]="inputVal"/>
+        <ng-container *ngIf="dropdown">
+            <ul class="dropdown" [ngClass]="openDropdown ? 'expandable' : ''">
+                <li *ngFor="let item of inputDropdown" (click)="selectDropdown(item)">{{item}}</li>
+            </ul>
+        </ng-container>
+</div>

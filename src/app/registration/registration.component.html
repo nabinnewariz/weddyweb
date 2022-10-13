@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Registration</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <app-custom-input-box [labelInput]="'First Name'" [formType]="'text'" (inputValue)="fNameInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Last Name'" [formType]="'text'" (inputValue)="lNameInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Email'" [formType]="'email'" (inputValue)="emailInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Mobile'" [formType]="'number'" (inputValue)="mobNumInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Password'" [formType]="'password'" (inputValue)="pwInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'valid PW'" [formType]="'password'" (inputValue)="conPWInputValue($event)"></app-custom-input-box>
+        <!-- <p>
+            <button type="submit">Submit</button>
+        </p> -->
+        <app-custom-button [btnText]="'Submit'" [btnType]="'submit'"></app-custom-button>
+    </form>
+    <!-- <app-custom-button [btnText]="'Submit'" [btnType]="'submit'"></app-custom-button> -->
+    <button (click)="getData()">get the guest data</button>
+</div>

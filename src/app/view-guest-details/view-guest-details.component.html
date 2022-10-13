@@ -1,0 +1,25 @@
+
+<div class="container">
+    <ul class="header">
+        <li>Firstname</li>
+        <li>Lastname</li>
+        <li>Location</li>
+        <li>Veggie</li>
+        <li>Chicken</li>
+        <li>Mutton</li>
+        <li>Fish</li>
+        <li>Total</li>
+    </ul>
+    <div class="tableData">
+        <ul *ngFor="let guest of Details">
+            <li>{{guest.firstname}}</li>
+            <li>{{guest.lastname}}</li>
+            <li>{{guest.location}}</li>
+            <li>{{guest.Veggie}}</li>
+            <li>{{guest.chicken}}</li>
+            <li>{{guest.mutton}}</li>
+            <li>{{guest.fish}}</li>
+            <li>{{guest.total}}</li>
+        </ul>
+    </div>
+</div>

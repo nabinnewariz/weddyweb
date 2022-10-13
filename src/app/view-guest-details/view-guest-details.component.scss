@@ -1,0 +1,14 @@
+ul {
+    display: flex;
+    list-style: none;
+    li {
+        margin: 5px;
+        padding: 10px 30px;
+        width: 12.5%;
+    }
+}
+.header {
+    li {
+        background-color: #ccc;
+    }
+}

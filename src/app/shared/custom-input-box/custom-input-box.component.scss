@@ -1,0 +1,76 @@
+.input-wrapper {
+    height: 40px;
+    border: 1px solid #d1d1d1;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+
+    label {
+        position: absolute;
+        margin: auto;
+        left: 10px;
+        right: 0;
+        width: 115px;
+        top: 0;
+        bottom: 0;
+        color: #b2b2b2;
+        height: 100%;
+        line-height: 60px;
+        font-size: 20px;
+        z-index: -1;
+        transition: 0.3s;
+    }
+    input {
+        border: 0;
+        height: 100%;
+        width: 100%;
+        outline: none;
+        background: transparent;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+.newWrapClass {
+    display: flex!important;
+    justify-content: flex-end!important;
+}
+.newLabelClass {
+    color: #000!important;
+    font-weight: 600;
+    font-size: 15px!important;
+    left: 10px!important;
+    right: 100%!important;
+    transition: 0.3s;
+}
+.newInputClass {
+    width: 82%!important;
+}
+.dropdown {
+    list-style: none;
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    overflow: auto;
+    transition: 300ms;
+    height: 0;
+    z-index: 1;
+
+    li {
+        height: 30px;
+        line-height: 30px;
+        padding: 5px 10px;
+        border-bottom: 1px solid #e1e1e1;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+.expandable {
+    max-height: 230px;
+    transition: 300ms;
+    height: 230px;
+    border: 1px solid #b2b2b2;
+}

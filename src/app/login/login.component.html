@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>Sign in</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <app-custom-input-box [labelInput]="'Email Id'" [formType]="'email'" (inputValue)="emailInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Password'" [formType]="'password'" (inputValue)="passwordInputValue($event)"></app-custom-input-box>
+        <app-custom-button [btnText]="'Submit'" [btnType]="'submit'"></app-custom-button>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    button {
+        height: 45px;
+        min-width: 120px;
+        border: 0;
+        padding: 10px 20px;
+        width: auto;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #000;
+        border-radius: 4px;
+        color: #fff;
+    }
+}

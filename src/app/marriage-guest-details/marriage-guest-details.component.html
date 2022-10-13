@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Enter Guest Details</h1>
+    <form [formGroup]="guestDetailsForm" (ngSubmit)="onSubmit()">
+        <app-custom-input-box [labelInput]="'First Name'" [formType]="'text'" (inputValue)="fNameInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Last Name'" [formType]="'text'" (inputValue)="lNameInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Location'" [formType]="'text'" (inputValue)="locationInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Veggie'" [formType]="'text'" [dropdown]="true" (inputValue)="VeggieInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Chicken'" [formType]="'text'" [dropdown]="true" (inputValue)="ChickenInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Mutton'" [formType]="'text'" [dropdown]="true" (inputValue)="MuttonInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Fish'" [formType]="'text'" [dropdown]="true" (inputValue)="FishInputValue($event)"></app-custom-input-box>
+        <app-custom-input-box [labelInput]="'Total'" [formType]="'number'" [totalFamily]="totalFamily"></app-custom-input-box>
+        <!-- <app-custom-button [btnText]="'Submit'" [btnType]="'submit'"></app-custom-button> -->
+        <app-custom-button [btnText]="'Submit'" [btnType]="'submit'"></app-custom-button>
+    </form>
+    <!-- <button (click)="getData()">get the guest data</button> -->
+</div>
