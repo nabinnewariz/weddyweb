@@ -3,9 +3,9 @@ const path = require('path');
 const app = express();
 
 
-app.use(express.static(__dirname + '/dist/<template>'));
+app.use(express.static(__dirname + '/dist/template'));
 app.get('/*', function(req,res){
-    res.sendFile(path.join(__dirname+'/dist/<template>/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/template', 'index.html'));
 });
 
 
