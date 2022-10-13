@@ -1,5 +1,5 @@
-<app-registration *ngIf="registrationData"></app-registration>
-<app-login *ngIf="validLoginData"></app-login>
-<app-marriage-guest-details *ngIf="validLoginPage"></app-marriage-guest-details>
-<app-view-guest-details></app-view-guest-details>
+<!-- <app-registration *ngIf="registrationData"></app-registration> -->
+<app-login *ngIf="validLoginPage"></app-login>
+<app-marriage-guest-details *ngIf="validLoginData"></app-marriage-guest-details>
+<app-view-guest-details *ngIf="showDetailsData"></app-view-guest-details>
 <router-outlet></router-outlet>

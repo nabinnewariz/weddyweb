@@ -68,12 +68,18 @@ export class MarriageGuestDetailsComponent implements OnInit {
       chicken : this.guestDetailsForm.value.Chicken,
       mutton : this.guestDetailsForm.value.Mutton,
       fish : this.guestDetailsForm.value.Fish,
-      total : this.guestDetailsForm.value.Veggie + this.guestDetailsForm.value.Chicken + 
-                            this.guestDetailsForm.value.Mutton + this.guestDetailsForm.value.Fish
+      total : this.totalFamily
     }
     this.serve.marriageData(payload).subscribe(data => {
       console.log(data," guest data details")
     })
+    setTimeout(()=> {
+      this.guestDetailsForm.reset();
+    }, 200);
+    this.serve.getMarriageData().subscribe(data => {
+      console.log(data," guest data details")
+    });
+    this.serve.showMarriageData(true);
   }
 
 

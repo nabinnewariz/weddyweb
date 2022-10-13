@@ -8,9 +8,10 @@ import { MarriageServicesService } from './services/marriage-services.service';
 })
 export class AppComponent {
   title = 'template';
-  validLoginData: any = true;
+  validLoginData: any = false;
   registrationData: any = true;
   validLoginPage: boolean = true;
+  showDetailsData: any = false;
 
   constructor(public serv: MarriageServicesService) { }
 
@@ -18,7 +19,14 @@ export class AppComponent {
     this.serv.validLogin.subscribe(data => {
       if(data) {
         this.validLoginData = data;
-        // this.validLoginPage = false;
+        this.validLoginPage = false;
+      }
+    })
+
+    this.serv.getMarriageDataSub.subscribe(data => {
+      if (data) {
+        this.showDetailsData = data;
+        this.validLoginData = false;
       }
     })
   }

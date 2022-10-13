@@ -9,6 +9,7 @@ export class MarriageServicesService {
   // env = `http://localhost:3000/`
 
   validLogin = new Subject();
+  getMarriageDataSub = new Subject();
   constructor(public http: HttpClient) { }
 
 
@@ -39,5 +40,9 @@ export class MarriageServicesService {
 
   sendValidLogin(flag: any) {
     this.validLogin.next(flag);
+  }
+
+  showMarriageData(flag: boolean) {
+    this.getMarriageDataSub.next(flag);
   }
 }
