@@ -8,10 +8,10 @@ import { MarriageServicesService } from './services/marriage-services.service';
 })
 export class AppComponent {
   title = 'template';
-  validLoginData: any = true;
+  validLoginData: any = false;
   registrationData: any = true;
   validLoginPage: boolean = true;
-  showDetailsData: any = true;
+  showDetailsData: any = false;
 
   constructor(public serv: MarriageServicesService) { }
 
