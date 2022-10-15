@@ -8,7 +8,7 @@ import { MarriageServicesService } from '../services/marriage-services.service';
 })
 export class ViewGuestDetailsComponent implements OnInit, OnChanges {
   Details: any;
-
+  searchValue: any;
   constructor(public servic : MarriageServicesService) { }
 
   ngOnInit(): void {
