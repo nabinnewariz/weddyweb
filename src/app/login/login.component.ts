@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
     email: new FormControl(),
     password: new FormControl(),
   })
+  showHome: boolean = false;
+  loginPage: boolean = true;
   constructor(public serv : MarriageServicesService) { }
 
   ngOnInit(): void {
@@ -24,7 +26,12 @@ export class LoginComponent implements OnInit {
   passwordInputValue(val: any) {
     this.loginForm.value.password = val;
   }
-
+  addguestTable() {
+    this.serv.sendValidLogin(true); 
+  }
+  showguestTable() {
+    this.serv.showMarriageData(true);
+  }
   onSubmit() {
     let paylod = {
       email : this.loginForm.value.email,
@@ -32,7 +39,7 @@ export class LoginComponent implements OnInit {
     }
     this.serv.login(paylod).subscribe(data => {
       if (data === 'successfull') {
-        this.serv.sendValidLogin(true); 
+        this.showHome = true;
       }
     })
   }

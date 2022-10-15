@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="loginPage">
     <h1>Sign in</h1>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <app-custom-input-box [labelInput]="'Email Id'" [formType]="'email'" (inputValue)="emailInputValue($event)"></app-custom-input-box>
@@ -6,3 +6,11 @@
         <app-custom-button [btnText]="'Submit'" [btnType]="'submit'"></app-custom-button>
     </form>
 </div>
+
+<ng-container *ngIf="showHome">
+    <h1 [ngStyle]="{'text-align' : 'center'}">Home Page</h1>
+    <div [ngStyle]="{'display' : 'flex'}">
+        <app-custom-button [btnText]="'View Guest Table'" [btnType]="'text'" (click)="showguestTable()"></app-custom-button>
+        <app-custom-button [btnText]="'Add Guest Details'" [btnType]="'text'" (click)="addguestTable()"></app-custom-button> 
+    </div>
+</ng-container>
