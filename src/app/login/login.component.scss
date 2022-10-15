@@ -18,13 +18,17 @@
         text-align: center;
     }
     form { width: 100%;}
-    @media screen and (max-width: 767px) {
-        width: 100%;
-    }
 }
 ::ng-deep .input-wrapper label{
     // width: 20%!important;
 }
 ::ng-deep .container .input-wrapper .newInputClass {
     width: 78% !important;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
 }

@@ -38,6 +38,12 @@ export class MarriageServicesService {
     return result;
   }
 
+  getSearch(pylod: {firstname: any;}): Observable<any> {
+    let url = this.env+`Searchdata`;
+    let result = this.http.post(url, pylod).pipe(map((res : any) => res));
+    return result;
+  }
+
   sendValidLogin(flag: any) {
     this.validLogin.next(flag);
   }

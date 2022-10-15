@@ -1,4 +1,6 @@
-
+<h1 [ngStyle]="{'text-align': 'center'}">Guest Details</h1>
+<input type="text" placeholder="Search First Name">
+<app-custom-button [btnText]="'Search First Name'" [btnType]="'text'" (click)="search()"></app-custom-button>
 <div class="container">
     <ul class="header">
         <li>Firstname</li>

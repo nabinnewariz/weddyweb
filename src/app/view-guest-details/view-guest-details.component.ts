@@ -24,6 +24,17 @@ export class ViewGuestDetailsComponent implements OnInit, OnChanges {
         this.servic.getMarriageData().subscribe(data => {
           this.Details = data;
           console.log(data,"data calling");
+        });
+      }
+    })
+  }
+
+  search() {
+    this.servic.getMarriageDataSub.subscribe(data => {
+      if (data) {
+        this.servic.getMarriageData().subscribe(data => {
+          this.Details = data;
+          console.log(data,"data calling");
         })
       }
     })
