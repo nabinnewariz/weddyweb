@@ -28,9 +28,11 @@ export class LoginComponent implements OnInit {
   }
   addguestTable() {
     this.serv.sendValidLogin(true); 
+    this.showHome = false;
   }
   showguestTable() {
     this.serv.showMarriageData(true);
+    this.showHome = false;
   }
   onSubmit() {
     let paylod = {
