@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
     this.serv.login(paylod).subscribe(data => {
       if (data === 'successfull') {
         this.showHome = true;
+        this.loginPage = false;
       }
     })
   }

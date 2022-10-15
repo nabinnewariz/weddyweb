@@ -8,9 +8,11 @@
 </div>
 
 <ng-container *ngIf="showHome">
-    <h1 [ngStyle]="{'text-align' : 'center'}">Home Page</h1>
-    <div [ngStyle]="{'display' : 'flex'}">
-        <app-custom-button [btnText]="'View Guest Table'" [btnType]="'text'" (click)="showguestTable()"></app-custom-button>
-        <app-custom-button [btnText]="'Add Guest Details'" [btnType]="'text'" (click)="addguestTable()"></app-custom-button> 
+    <div class="container">
+        <h1 [ngStyle]="{'text-align' : 'center'}">Home Page</h1>
+        <div>
+            <app-custom-button [btnText]="'View Guest Table'" [btnType]="'text'" (click)="showguestTable()"></app-custom-button>
+            <app-custom-button [btnText]="'Add Guest Details'" [btnType]="'text'" (click)="addguestTable()"></app-custom-button> 
+        </div>
     </div>
 </ng-container>
