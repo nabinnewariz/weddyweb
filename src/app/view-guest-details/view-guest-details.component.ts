@@ -35,4 +35,10 @@ export class ViewGuestDetailsComponent implements OnInit, OnChanges {
     })
   }
 
+  searchLocat(val: any) {
+    this.servic.getLocation({location: val}).subscribe(data => {
+      this.Details = data;
+    })
+  }
+
 }

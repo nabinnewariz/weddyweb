@@ -1,7 +1,9 @@
 <h1 [ngStyle]="{'text-align': 'center'}">Guest Details</h1>
 <div [ngStyle]="{'display': 'flex'}">
-    <input type="text" placeholder="Search First Name" [(ngModel)]="searchValue">
-    <app-custom-button [btnText]="'Search First Name'" [btnType]="'text'" (click)="search(searchValue)"></app-custom-button>
+    <input type="text" placeholder="Search First Name" [(ngModel)]="searchName">
+    <app-custom-button [btnText]="'Search First Name'" [btnType]="'text'" (click)="search(searchName)"></app-custom-button>
+    <input type="text" placeholder="Search Location" [(ngModel)]="searchLoc">
+    <app-custom-button [btnText]="'Search Location'" [btnType]="'text'" (click)="searchLocat(searchLoc)"></app-custom-button>
 </div>
 <div class="container">
     <ul class="header">
