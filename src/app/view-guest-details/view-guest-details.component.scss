@@ -5,6 +5,9 @@ ul {
         margin: 5px;
         padding: 10px 30px;
         width: 12.5%;
+        flex-wrap: wrap;
+        min-width: 21.5%;
+        text-align: center;
     }
 }
 .header {

@@ -8,7 +8,7 @@
 </div>
 
 <ng-container *ngIf="showHome">
-    <div class="container">
+    <div class="container" [ngStyle]="{'display' : 'block'}">
         <h1 [ngStyle]="{'text-align' : 'center'}">Home Page</h1>
         <div>
             <app-custom-button [btnText]="'View Guest Table'" [btnType]="'text'" (click)="showguestTable()"></app-custom-button>
