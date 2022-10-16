@@ -44,10 +44,10 @@ export class MarriageServicesService {
     return result;
   }
 
-  getLocation(payld: {location: any;}): Observable<any> {
-    let url = this.env+`Locationdata`;
-    let result = this.http.post(url, payld).pipe(map((res : any) => res));
-    return result;
+  getLocation(payld: {location: any;}) {
+    // let url = this.env+`Locationdata`;
+    // let result = this.http.post(url, payld).pipe(map((res : any) => res));
+    // return result;
   }
 
   sendValidLogin(flag: any) {
